@@ -39,5 +39,5 @@ git push
 ## Generate New Password
 
 ```bash
-tr -dc 'A-Za-z0-9!#$%&/()=' </dev/urandom | head -c 24
+cat /dev/random | tr -dc 'A-Za-z0-9!#$%&/()=' | head -c24 | pass insert -m inmitto/path/to/key
 ```
