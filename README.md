@@ -35,3 +35,9 @@ gpg --lsign [MAIL OF NEW USER]
 pass init -p inmitto $(cat .gpg-id)
 git push
 ```
+
+## Generate New Password
+
+```bash
+tr -dc 'A-Za-z0-9!#$%&/()=' </dev/urandom | head -c 24
+```
